@@ -8,6 +8,7 @@ interface AppShellProps {
 const disableNavbar = [
     "/auth/login",
     "/auth/register",
+    "/404",
 ]
 
 const AppShell = ({ children }: AppShellProps) => {
@@ -17,7 +18,6 @@ const AppShell = ({ children }: AppShellProps) => {
         <main>
             {!disableNavbar.includes(pathname) && <Navbar />}
             {children}
-            <div className="p-4 bg-slate-900 text-white">Footer</div>
         </main>
     )
 }
